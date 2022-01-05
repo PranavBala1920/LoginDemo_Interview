@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // click here for login
 app.get('/', (req, res) => {
+    console.log("starting--------")
     res.sendFile('/index.html', { root: __dirname })
 })
 
@@ -30,5 +31,5 @@ app.post('/login', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`app listening at http://localhost:${port}`)
 })
